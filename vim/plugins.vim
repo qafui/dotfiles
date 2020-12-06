@@ -1,15 +1,19 @@
 " vim-plug - https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 
-" colorschemes
+" COLOR SCHEMES
+Plug 'rakr/vim-one'
 
-" general
+" GENERAL
 Plug 'preservim/nerdtree'
 
-" editing
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
-" text objects
+Plug 'sheerun/vim-polyglot'
 
-" language helpers
+" EDITING
+" TEXT OBJECTS
+" LANGUAGE HELPERS
 
 call plug#end()
