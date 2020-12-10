@@ -13,6 +13,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
 
 " EDITING
+Plug 'mbbill/undotree'
+
 " TEXT OBJECTS
 " LANGUAGE HELPERS
 

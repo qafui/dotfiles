@@ -9,3 +9,5 @@ alias ls=lc
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
 fi
+
+export MYVIMRC="~/.config/nvim/init.vim"
