@@ -94,3 +94,5 @@ export PATH="/usr/local/sbin:$PATH"
 
 # fasd
 eval "$(fasd --init auto)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

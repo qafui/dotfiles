@@ -16,5 +16,5 @@ nnoremap <space> za
 " source vimrc
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
-" save session
-nnoremap <leader>s :mksession<CR>
+" open ag.vim
+nnoremap <leader>a :Ag

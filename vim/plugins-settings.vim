@@ -8,3 +8,7 @@ if has("persistent_undo")
     set undofile
 endif
 nnoremap <F5> :UndotreeToggle<CR>
+
+" fzf
+set rtp+=/usr/local/opt/fzf
+nnoremap <c-p> :Files<CR>
