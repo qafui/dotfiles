@@ -2,6 +2,7 @@
 let g:airline_theme='one'
 let g:airline_powerline_fonts = 1
 
+
 " undotree
 if has("persistent_undo")
     set undodir=$HOME"/.undodir"
@@ -9,6 +10,55 @@ if has("persistent_undo")
 endif
 nnoremap <F5> :UndotreeToggle<CR>
 
+
 " fzf
 set rtp+=/usr/local/opt/fzf
-nnoremap <c-p> :Files<CR>
+
+" search for git tracked files
+nnoremap <leader>f :GFiles<CR>
+
+" search for files
+nnoremap <leader>F :Files<CR>
+
+" search using Ag
+nnoremap <leader>a :Ag
+
+" search open buffers
+nmap <leader>b :Buffers<CR>
+
+" search buffer history
+nmap <leader>h :History<CR>
+
+" search tags in current buffer
+nmap <leader>t :BTags<CR>
+
+" search tags across project
+nmap <leader>T :Tags<CR>
+
+" search for lines in current buffer
+nmap <leader>l :BLines<CR>
+
+" search for lines in loaded buffer
+nmap <leader>L :Lines<CR>
+
+" search for marked lines
+nmap <leader>' :Marks<CR>
+
+" help finder
+nmap <leader>H :Helptags!<CR>
+
+" fuzzy search defined commands, whether they be user defined, plugin defined, or native commands
+nmap <leader>C :Commands<CR>
+
+" fuzzy search through :command history
+nmap <leader>: :History:<CR>
+
+" fuzzy search key mappings, which is great for checking against current mappings before defining a new one
+nmap <leader>M :Maps<CR>
+
+" fuzzy search filetype syntaxes, and hit Enter on a result to set that syntax on the current buffer
+nmap <leader>s :Filetypes<CR>
+
+
+" vim-slash
+noremap <plug>(slash-after) zz

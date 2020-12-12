@@ -93,6 +93,6 @@ export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
 export PATH="/usr/local/sbin:$PATH"
 
 # fasd
-eval "$(fasd --init auto)"
+eval "$(fasd --init auto --alias wat)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
