@@ -40,10 +40,10 @@ plugins=(
   rake
   redis-cli
   thefuck
-  # tmux
+  tmux
   urltools
   zsh_reload
-  # zsh-interactive-cd
+  zsh-interactive-cd
   fasd
 )
 
@@ -72,9 +72,6 @@ fi
 # alias ohmyzsh="vim ~/.oh-my-zsh"
 source $HOME/dotfiles/aliases
 
-# The Fuck - https://github.com/nvbn/thefuck
-eval $(thefuck --alias)
-
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
@@ -93,6 +90,10 @@ export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
 export PATH="/usr/local/sbin:$PATH"
 
 # fasd
-eval "$(fasd --init auto --alias wat)"
+eval "$(fasd --init auto)"
 
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# thefuck 
+eval $(thefuck --alias)

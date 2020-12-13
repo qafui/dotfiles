@@ -1,10 +1,13 @@
-" COLORS
+" COLORS & TEXT
 " set color scheme and background preference
 colorscheme one
 set background=dark
 
 " enable syntax highlight
 syntax enable
+
+" set width to 80 characters
+:set textwidth=79
 
 
 " TMUX
@@ -21,6 +24,7 @@ else
     let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
+
 " SPACES & TABS
 " number of visual spaces per tab
 set tabstop=2
@@ -33,6 +37,7 @@ set expandtab
 
 " indenting is 2 spaces
 :set shiftwidth=2
+
 
 " UI CONFIG
 " show line numbers
@@ -55,6 +60,10 @@ set lazyredraw
 
 " highlight matching [{()}]
 set showmatch
+
+" open new split panes to right and below
+set splitright
+set splitbelow
 
 
 " SEARCH

@@ -1,64 +1,28 @@
 " vim airline
-let g:airline_theme='one'
+let g:airline_theme='one' 
 let g:airline_powerline_fonts = 1
 
 
 " undotree
 if has("persistent_undo")
-    set undodir=$HOME"/.undodir"
+    set undodir=$HOME."/.undodir"
     set undofile
 endif
-nnoremap <F5> :UndotreeToggle<CR>
 
 
 " fzf
 set rtp+=/usr/local/opt/fzf
 
-" search for git tracked files
-nnoremap <leader>f :GFiles<CR>
+" bindings for spliting search results
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit' }
 
-" search for files
-nnoremap <leader>F :Files<CR>
+" default fzf layout
+" - down / up / left / right
+let g:fzf_layout = { 'down': '~40%' }
 
-" search using Ag
-nnoremap <leader>a :Ag
-
-" search open buffers
-nmap <leader>b :Buffers<CR>
-
-" search buffer history
-nmap <leader>h :History<CR>
-
-" search tags in current buffer
-nmap <leader>t :BTags<CR>
-
-" search tags across project
-nmap <leader>T :Tags<CR>
-
-" search for lines in current buffer
-nmap <leader>l :BLines<CR>
-
-" search for lines in loaded buffer
-nmap <leader>L :Lines<CR>
-
-" search for marked lines
-nmap <leader>' :Marks<CR>
-
-" help finder
-nmap <leader>H :Helptags!<CR>
-
-" fuzzy search defined commands, whether they be user defined, plugin defined, or native commands
-nmap <leader>C :Commands<CR>
-
-" fuzzy search through :command history
-nmap <leader>: :History:<CR>
-
-" fuzzy search key mappings, which is great for checking against current mappings before defining a new one
-nmap <leader>M :Maps<CR>
-
-" fuzzy search filetype syntaxes, and hit Enter on a result to set that syntax on the current buffer
-nmap <leader>s :Filetypes<CR>
-
-
-" vim-slash
-noremap <plug>(slash-after) zz
+" ignore files found in .gitignore and node_modules by telling fzf to use Ag let
+" $FZF_DEFAULT_COMMAND = 'ag -g ""'
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'

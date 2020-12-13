@@ -11,3 +11,9 @@ if type nvim > /dev/null 2>&1; then
 fi
 
 export MYVIMRC="~/.config/nvim/init.vim"
+
+# visualing pretty ping
+alias ping='prettyping --nolegend'
+
+# alias for color coded top
+alias top="sudo htop"
