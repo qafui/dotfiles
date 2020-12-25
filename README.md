@@ -1,3 +1,8 @@
+# Getting Started
+
+**Installation Steps**
+
+
 # CONFIGURATIONS  
 **neovim**  
 `general.vim` - General settings that fit in the other files  
